@@ -33,12 +33,14 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
         backgroundColor: Colors.black,
         body: Center(
           child: GestureDetector(
+            //tap hold to stop
             onTapDown: (tapDetails) {
               animationController.stop();
             },
             onTapUp: (tapDetails) {
               animationController.repeat();
             },
+            //tap to stop tap to start
             // onTap: () {
             //   if (animationController.isAnimating) {
             //     animationController.stop();
